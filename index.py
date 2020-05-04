@@ -9,13 +9,13 @@ print(''.join(first_word))
 
 error_count = 0 
 def rungame():
-	error_count = 0
+	error_count = 0 
 	while True:
-	    letter = input('\nвведите одну английскую букву: ')	
-	    if letter in secret_word:
-	    	for index, simbol in enumerate(secret_word):
-	    		if simbol == letter:
-	    			first_word[index] = simbol
+	    letter = input('\nвведите одну английскую букву: ')	#ввод буквы
+	    if letter in secret_word:#если буква есть в рандомном слове
+	    	for index, simbol in enumerate(secret_word): # разбиение букв в слове на индексы
+	    		if simbol == letter: # если символ слова совпал с введенной буквой
+	    			first_word[index] = simbol # тогда индекс элемента в слове будет равняться этой букве
 	    	if '_ ' not in first_word:
 	    		print("Победа: " + secret_word.upper())
 	    		break
